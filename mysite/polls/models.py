@@ -1,9 +1,10 @@
 from django.db import models
 from .enums import QuestionTypeEnum
 
+
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('Date Published')
     type = models.CharField(max_length=30, choices=[(i.value, i.name) for i in QuestionTypeEnum],
                             null=False, blank=False, default=QuestionTypeEnum.EASY.value)
 
