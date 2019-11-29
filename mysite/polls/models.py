@@ -8,6 +8,7 @@ class Question(models.Model):
                             null=False, blank=False, default=QuestionTypeEnum.EASY.value)
 
 
+
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
