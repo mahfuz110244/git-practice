@@ -1,7 +1,7 @@
 from django.db import models
 from .enums import QuestionTypeEnum
 
-
+# Your model here
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('Date Published')
